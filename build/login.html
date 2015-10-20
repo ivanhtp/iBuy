@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Login | Ponto Eletrônico</title>
+    <meta name="theme-color" content="#f26261">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="orange">
+
+    <!-- Stylesheet (all in one) -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Icons for tablets and apps -->
+    <link rel="icon" sizes="355x355" href="img/icons/icon.png">
+
+    <!-- RequireJS AMD -->
+    <script type="text/javascript" src="vendors/requirejs/require.min.js" data-main="js/requireLogin.js"></script>
+
+</head>
+
+<body ng-controller="LoginCtrl">
+<div class="container">
+
+    <div class="card card-container ng-cloak">
+
+        <!--<img id="profile-img" class="profile-logo-card" src="img/vector/logo.svg" />-->
+        <h1 id="profile-name" class="profile-name-card"><i class="glyphicon glyphicon-shopping-cart"></i><i>iBuy</i></h1>
+        <p class="text-muted text-center"><i>Imagine um usuário e senha: aposto que eles vão funcionar... =)</i></p>
+
+        <form name="loginForm" novalidate>
+
+            <!-- Username -->
+            <div class="form-group" ng-class="{'has-error' : (!loginForm.loginUsername.$valid && loginForm.$submitted)}">
+                <input type="email" name="loginUsername" ng-model="LOGIN" ng-disabled="LOADING" class="form-control" placeholder="Usuário" required autofocus>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group" ng-class="{'has-error' : (!loginForm.loginPassword.$valid && loginForm.$submitted)}">
+                <input type="password" name="loginPassword" ng-model="PASSWORD" ng-disabled="LOADING" class="form-control" placeholder="Senha" required>
+            </div>
+
+            <!-- Form Error Messages -->
+            <div class="form-errors text-danger ng-cloak">
+                <div ng-repeat="error in formErrors track by $index">{{formErrors[$index]}}</div>
+            </div>
+            <div class="text-danger" ng-messages="loginForm.loginUsername.$error" ng-if="loginForm.loginUsername.$dirty && loginForm.$submitted" role="alert">
+                <div ng-message="required">É necessário informar o usuário.</div>
+                <div ng-message="email">O endereço de e-mail não é válido</div>
+            </div>
+            <div class="text-danger" ng-messages="loginForm.loginPassword.$error" ng-if="loginForm.loginPassword.$dirty && loginForm.$submitted" role="alert">
+                <div ng-message="required">É necessário informar a senha.</div>
+            </div>
+
+
+            <!-- Sign in -->
+            <button type="submit" class="btn btn-lg btn-primary btn-block btn-signin" ng-disabled="LOADING" ng-click="requestLogin()">Entrar</button>
+
+            <!-- Remember-me -->
+            <div id="remember" class="checkbox">
+                <label class="text-left">
+                    <input type="checkbox" value="remember-me"> Lembrar-se
+                </label>
+                <!-- Forgot? -->
+                <a href="#" class="forgot-password text-right">
+                    Esqueceu a senha?
+                </a>
+            </div>
+        </form>
+
+
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+/*! PontoEletronico - 0.0.1 - 2015-10-20 */
+define(["app"],function(App){App.controller("ToolbarCtrl",["$scope","$http","$log","$location","$window","authApp",function($scope,$http,$log,$location,$window,authApp){$scope.logOut=function(){authApp.clearSession()};$scope.USER_NAME=$window.localStorage["sl.UserName"]}])});

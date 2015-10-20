@@ -1,0 +1,50 @@
+<!-- BoughtList-->
+<div id="BoughtListCtrl" class="panel-heading">
+ <span> Produtos Comprados</span>
+</div>
+
+<div class="panel-body">
+    <!-- Loading-->
+    <div class="spinner" ng-show="LOADING">
+        <div class="throbber-loader">Carregando…</div>
+    </div>
+
+    <!-- Empty State -->
+    <div ng-if="(boughtList.length == 0 || boughtList == undefined) && !LOADING" class="text-light">
+        <p class="text-center">
+            Nenhum produto...
+        </p>
+    </div>
+
+    <table class="table table-bordered table-hover table-striped table-responsive sl-cursor-pointer" ng-show="(boughtList.length > 0 && boughtList != undefined  && !LOADING)">
+        <thead>
+        <tr>
+            <th class="col-sm-1 text-center"></th>
+            <th class="col-sm-6 text-left">Produto</th>
+            <th class="col-sm-2">Valor</th>
+            <th class="col-sm-3"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in boughtList | filter:{ bought: true}:true track by $index" ng-click="product.editing = true" ng-mouseenter="product.hovering = true" ng-mouseleave="product.hovering = false">
+            <td class="text-center">
+                <input type="checkbox" ng-model="product.selected">
+            </td>
+            <td>
+                <span>{{product.name}}</span>
+            </td>
+            <td>
+                <span>{{product.value}}</span>
+            </td>
+            <td class="text-center">
+                    <button type="button" class="btn btn-sm btn-warning" ng-click="unbuyItem(product)">
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                    </button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    
+</div>

@@ -1,0 +1,2 @@
+/*! PontoEletronico - 0.0.1 - 2015-10-20 */
+define(["app"],function(App){App.controller("SidenavCtrl",["$scope","$window","CONST_ENDPOINT","$http",function($scope,$window,CONST_ENDPOINT,$http){$scope.LOADING=false}])});
