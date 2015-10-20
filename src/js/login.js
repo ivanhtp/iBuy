@@ -119,7 +119,7 @@ define([], function(){
             $scope.redirectToApp = function() {
                 $log.debug("Login.redirectToApp ");
 
-                $window.location = "/app.html";
+                $window.location = "app.html";
 
             };
 
