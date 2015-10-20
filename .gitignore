@@ -1,0 +1,8 @@
+ignore/
+build/
+.DS_Store
+.idea/
+.sass-cache/
+node_modules/
+src/vendors/
+deploy/temp/

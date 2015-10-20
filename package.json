@@ -1,0 +1,17 @@
+{
+  "name": "PontoEletronico",
+  "author": "Equipe BRI",
+  "description": "https://bitbucket.org/brunopessoa/pontoeletronico/overview",
+  "version": "0.0.1",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "~0.8.0",
+    "grunt-contrib-compass": "~1.0.1",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-ftp-deploy": "~0.1.10",
+    "grunt-http-server": "~1.2.0"
+  }
+}

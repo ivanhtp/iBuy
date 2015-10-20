@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="pt"  >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponto Eletrônico</title>
+    <meta name="theme-color" content="#f26261">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="orange" />
+
+    <!-- Stylesheet (all in one) -->
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Icons for tablets and apps -->
+    <link rel="icon" sizes="355x355" href="img/icons/icon.png">
+
+    <!-- RequireJS AMD -->
+    <script type="text/javascript" src="vendors/requirejs/require.min.js" data-main="js/requireApp.js"></script>
+
+
+</head>
+
+<body ng-controller="ToolbarCtrl" id="ToolbarCtrl">
+
+    <!-- TOOLBAR TOP -->
+    <nav ng-include="'views/toolbar.html'"  class="navbar navbar-fixed-top navbar-inverse ng-cloak" role="navigation"role="toolbar"></nav>
+
+
+    <!-- CONTENT -->
+    <div class="container-fluid">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <!-- SIDENAV -->
+            <div ng-include="'views/sidenav.html'" ng-controller="SidenavCtrl" class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar"></div>
+
+            <!-- VIEW -->
+            <div class="col-xs-12 col-sm-9" >
+                <div class="panel" ng-view></div>
+            </div>
+
+        </div>
+    </div>
+
+    <toast></toast>
+
+</body>
+</html>

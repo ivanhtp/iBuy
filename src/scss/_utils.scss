@@ -1,0 +1,120 @@
+/*
+*   _    _ _   _ _ _ _
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Rokkitt:400,700|Open+Sans:300italic,400italic,700italic,700,300,600,400);
+//font-family: 'Rokkitt', serif;
+//font-family: 'Open Sans', sans-serif;
+
+// Classes de estilo
+.sl-style-i-block {
+  display: inline-block;
+}
+
+.sl-style-i-table {
+  display: inline-table;
+}
+
+.sl-style-text-left {
+  text-align: left;
+}
+
+.sl-style-text-right {
+  text-align: right;
+}
+
+.sl-style-margin-top {
+  margin-top: 1em;
+}
+
+//Incluido para remover o bold padrão de alguns elementos
+.bold{
+  font-weight: bold !important;
+}
+.no-bold{
+  font-weight: normal !important;
+}
+
+.no-margin{ margin:0px !important; }
+.margin-1{ margin:1px; }
+.margin-2{ margin:2px; }
+.margin-5{ margin:5px; }
+.margin-10{ margin:10px; }
+.margin-20{ margin:20px; }
+
+.margin-ver-5{ margin-top:5px !important; margin-bottom:5px !important; }
+.margin-ver-10{ margin-top:10px !important; margin-bottom:10px !important; }
+.margin-ver-20{ margin-top:20px !important; margin-bottom:20px !important; }
+.margin-ver-30{ margin-top:30px !important; margin-bottom:30px !important; }
+.margin-hor-5{ margin-left:5px  !important; margin-right:5px !important; }
+.margin-hor-10{ margin-left:10px !important; margin-right:10px !important; }
+.margin-hor-20{ margin-left:20px !important; margin-right:20px !important; }
+.margin-hor-30{ margin-left:30px !important; margin-right:30px !important; }
+
+.no-padding{ padding:0px !important}
+.padding-1{ padding:1px !important;}
+.padding-5{ padding:5px; }
+.padding-10{ padding:10px; }
+.padding-20{ padding:20px; }
+
+.padding-ver-5{ padding-top:5px; padding-bottom:5px; }
+.padding-ver-10{ padding-top:10px; padding-bottom:10px; }
+.padding-ver-20{ padding-top:20px; padding-bottom:20px; }
+
+.size-5{ font-size: 0.5em; }
+.size-7{ font-size: 0.7em; }
+.size-8{ font-size: 0.8em; }
+.size-15{ font-size: 1.5em; }
+.size-18{ font-size: 1.8em; }
+.size-20{ font-size: 2em; }
+.size-22{ font-size: 2.2em; }
+
+.no-border{ border: none !important}
+
+.sl-cursor-pointer{
+  cursor: pointer;
+}
+
+// Angular
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/*
+* ANIMATIONS
+* Put any transition here to create our animation library
+*/
+// Translate 3D doing nothing forces browser to use GPU acceleration ;)
+.animate-use-gpu {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.animate-60-fps {
+  @extend .animate-use-gpu;
+  -webkit-transition: all 0.218s ease-in-out;
+  -moz-transition: all 0.218s ease-in-out;
+  -ms-transition: all 0.218s ease-in-out;
+  transition: all 0.218s ease-in-out;
+}
+
+.animate-500 {
+  @extend .animate-use-gpu;
+  -webkit-transition: all 0.500s ease-in-out;
+  -moz-transition: all 0.500s ease-in-out;
+  -ms-transition: all 0.500s ease-in-out;
+  transition: all 0.500s ease-in-out;
+}
+
+.animate-1000 {
+  @extend .animate-use-gpu;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+

@@ -1,0 +1,7 @@
+@import "ponto/*.png";
+
+// Geracao de sprites
+$ponto-layout: smart;
+$ponto-sprite-dimensions: true;
+@include all-ponto-sprites;
+
